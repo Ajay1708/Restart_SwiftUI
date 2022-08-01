@@ -13,10 +13,13 @@ struct HomeView: View {
         VStack(spacing:20){
             // MARK: HEADER
             Spacer()
-            Image("character-2")
-                .resizable()
-                .scaledToFit()
+            ZStack {
+                CircleGroupView(ShapeColor: .gray, ShapeOpacity: 0.1)
+                Image("character-2")
+                    .resizable()
+                    .scaledToFit()
                 .padding()
+            }
             
             // MARK: CENTER
             Text("The time that leads to mastery is dependent on the intensity of our focus.")
@@ -30,7 +33,7 @@ struct HomeView: View {
             
             // MARK: FOOTER
             Button {
-                isOnBoardingViewActive = false
+                isOnBoardingViewActive = true
             } label: {
                 Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                 Text("Restart")

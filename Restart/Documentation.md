@@ -12,5 +12,7 @@
 -> Mark:- 5 ===> This capsule shape will works like an expandable background behind the actual button.
 -> Accent color is applied to some views and UI Controls. Developers can set it at the application level by specifying an accent color in the app's Asset Catalog. If there is no custom accent color defined in the project's assets catalog. In that case, each UI Element inherits a default color from the system, which apple may change any time in the future.
 -> When we use two or more UI elements inside a button label then swiftUI automatically renders the horizontal stack layout for it. 
-
 Note: 1)We are using app storage property wrapper to store, edit and recall its value using the device's permanent storage.
+-> Property Syntax: @State var variable_name: Data_Type
+-> @State is a property wrapper type that can read and write a value managed by swiftUI
+-> When the state value changes the view redraws itself.
