@@ -14,6 +14,9 @@ struct OnBoardingView: View {
      This true value will only be added to the property when the program does not find the onboarding key previously set in the device's permanent storage.
      When the running program finds a previously created onboarding key. then it will ignore the value set (right part after the equal sign) no matter what is there.
      */
+    @State var buttonWidth: CGFloat  = UIScreen.main.bounds.width - 80
+    @State var buttonOffset: CGFloat = 0
+    @State var isAnimating: Bool = false
     
     var body: some View {
         ZStack {
@@ -68,7 +71,7 @@ struct OnBoardingView: View {
                     HStack {
                         Capsule()
                             .fill(Color("ColorRed"))
-                        .frame(width: 80)
+                        .frame(width: buttonOffset+80)
                         Spacer()
                     }
                     // 4. CIRCLE(DRAGGABLE)
@@ -83,16 +86,35 @@ struct OnBoardingView: View {
                         }
                         .foregroundColor(.white)
                         .frame(width: 80, height: 80, alignment: .center)
-                        .onTapGesture {
+                        .offset(x: buttonOffset)
+                        .gesture(
+                            DragGesture()
+                                .onChanged{ gesture in
+                                    if gesture.translation.width > 0 && gesture.translation.width <= buttonWidth-80{
+                                        buttonOffset = gesture.translation.width
+                                    }
+                                }
+                                .onEnded{ gesture in
+                                    if buttonOffset > buttonWidth/2{
+                                        buttonOffset = buttonWidth-80
+                                        isOnBoardingViewActive = false  
+                                    }
+                                    else{
+                                        buttonOffset = 0
+                                    }
+                                }
+                        )//: GESTURE
+                        /*.onTapGesture {
                             isOnBoardingViewActive = false
-                        }
+                        }*/
                         Spacer()
                     }
                 }
-                .frame(height: 80, alignment: .center)
+                .frame(width: buttonWidth, height: 80, alignment: .center)
                 .padding()
             }
         }
+        .
     }
 }
 
