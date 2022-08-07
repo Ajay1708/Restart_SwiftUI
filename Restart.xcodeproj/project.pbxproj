@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B5DD77289F8F540068D17D /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5DD76289F8F540068D17D /* AudioPlayer.swift */; };
 		2D3189FA27DD9C8200B2A03B /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3189F927DD9C8200B2A03B /* RestartApp.swift */; };
 		2D3189FC27DD9C8200B2A03B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3189FB27DD9C8200B2A03B /* ContentView.swift */; };
 		2D3189FE27DD9C8500B2A03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D3189FD27DD9C8500B2A03B /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B5DD76289F8F540068D17D /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		2D3189F627DD9C8200B2A03B /* Restart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3189F927DD9C8200B2A03B /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		2D3189FB27DD9C8200B2A03B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B5DD75289F8F310068D17D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				18B5DD76289F8F540068D17D /* AudioPlayer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		2D3189ED27DD9C8200B2A03B = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		2D3189F827DD9C8200B2A03B /* Restart */ = {
 			isa = PBXGroup;
 			children = (
+				18B5DD75289F8F310068D17D /* Utilities */,
 				2DFC2FD028843222005954E0 /* Views */,
 				2D318A1427DDD07300B2A03B /* Documentation.md */,
 				2D318A0E27DDA4F900B2A03B /* Info.plist */,
@@ -189,6 +200,7 @@
 				2D318A1327DDA59800B2A03B /* HomeView.swift in Sources */,
 				2D3189FC27DD9C8200B2A03B /* ContentView.swift in Sources */,
 				2D3189FA27DD9C8200B2A03B /* RestartApp.swift in Sources */,
+				18B5DD77289F8F540068D17D /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

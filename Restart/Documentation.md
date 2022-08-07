@@ -16,3 +16,7 @@ Note: 1)We are using app storage property wrapper to store, edit and recall its 
 -> Property Syntax: @State var variable_name: Data_Type
 -> @State is a property wrapper type that can read and write a value managed by swiftUI
 -> When the state value changes the view redraws itself.
+
+# Animation
+.easeOut --> Slows down at the end of the animation with a predefined one second duration.
+.easeInOut --> The easeInOut curve will add a slightly dynamic movement to this animation, which will be slowed down by the long duration
